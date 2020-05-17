@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="На этом сайте содержится...">
+    <meta name="keywords" content="landing page, как создать сайт">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Stormup</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./libs/font-awesome/css/font-awesome.min.css" />
+    <link href="./css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/jquery.parallax.css" />
+    <link href="./css/main.css" rel="stylesheet">
+    <!--<script src="./js/jquery.parallax.js"></script>-->
+    <style>
+      #port {
+        /*background: rgb(47, 49, 52);*/
+
+        overflow: hidden;
+        position: relative;
+        /*height: 300px;*/
+      }
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header id="port">
+      <!--<div id="port">-->
+        <!-- Seven image layers, each layer slightly bigger than the one behind, making 'closer' layers move faster. -->
+        <!--<img class="parallax-layer" src="images/bg-header-1.jpg" alt="" style="height:325px;"/>-->
+
+        <!--<img class="parallax-layer" src="images/bg-header-1.jpg"/>-->
+
+        <img class="parallax-layer visible-lg" src="images/bg-header-2.png"/>
+
+        <img class="parallax-layer visible-lg" src="images/bg-header-3.png"/>
+
+
+      <!--</div>-->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 col-lg-2">
+            <img class="img-responsive logo-stormup center-block" src="./images/logo-stormup.png" alt="logo stormup">
+          </div>
+          <div class="col-md-6 col-lg-7"></div>
+
+
+          <div class="col-md-2 visible-xs">
+            <a href="#form-1" data-toggle="modal">
+              <div class="btn-entrance-block">
+                <div class="btn-entrance">
+                  <div class="btn-entrance-img"></div>
+                  <span>Войти</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-2 visible-xs">
+            <div class="btn-checkin-block-a">
+              <a href="#form-1" data-toggle="modal">
+                <div class="btn-checkin-block">
+                  <div class="btn-checkin">
+                    <!--<img src="images/checkin-img.png" alt="#">-->
+                    <div class="btn-checkin-img"></div>
+                    <span>Регистрация</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-3 hidden-xs">
+            <div class="reg-block">
+              <div class="btn-entrance-block-a">
+                <a href="#form-1" data-toggle="modal">
+                  <div class="btn-entrance-block">
+                    <div class="btn-entrance">
+                      <div class="btn-entrance-img"></div>
+                      <span>Войти</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="btn-checkin-block-a">
+                <a href="#form-1" data-toggle="modal">
+                  <div class="btn-checkin-block">
+                    <div class="btn-checkin">
+                      <!--<img src="images/checkin-img.png" alt="#">-->
+                      <div class="btn-checkin-img"></div>
+                      <span>Регистрация</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <!--************************************************************-->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="header-title">
+              <h1>Биржа доступная <br>
+              каждому</h1>
+            </div>
+            <div class="header-p">
+              Биржа STORMUP это аналог фондовой биржи, но с более <br class=" hidden-xs">
+              прогнозируемым графиком движения цены. Не важно<br class=" hidden-xs">
+              новичок Вы или профессионал - тут Вы сможете<br class="hidden-xs">
+              зарабатывать играючи!
+            </div>
+          </div>
+          <div class="col-md-5 header-video-block">
+            <a href="#modal-video" data-toggle="modal">
+              <div class="header-video-block-img">
+                <img class="img-responsive" src="images/header-video-bg.jpg" alt="#">
+                <div class="play-img">
+
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!--************************************************************-->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="start-earning">
+              <a href="#form-1" data-toggle="modal">Начать зарабатывать!</a>
+            </div>
+            <div class="start-earning-reg">
+              <p>
+                <a href="#form-1" data-toggle="modal">Зарегистрируйтесь</a> и пополните баланс,<br>
+                начинайте торговать!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="section-1">
+
+      <div class="section-1-block-min">
+        <div class="container hidden-lg">
+          <div class="row">
+            <div class="col-md-12">
+              <span class="section-1-title">Как заработать <br>
+              на STORMUP?</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="container-fluid hidden-lg">
+          <div class="row">
+            <!--<div class="section-1-block-bg-min">-->
+              <img class="img-responsive" src="./images/bg-section-1.jpg" alt="#">
+            <!--</div>-->
+          </div>
+        </div>
+      </div>
+      <div class="section-1-block">
+        <div class="container">
+          <div class="row visible-lg">
+            <div class="col-md-6">
+            <span class="section-1-title">Как заработать <br>
+            на STORMUP?</span>
+            </div>
+            <div class="col-md-6"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="block-buy">
+                <img class="img-responsive" src="images/buy.png" alt="#">
+                <p>Вы покупаете STP (внутрение "акции" <br class="hidden-xxs">
+                  STORMUP) и продаете когда цена <br class="hidden-xxs">
+                  поднимается.</p>
+                <div class="block-buy-btn">
+                  <a href="#form-1" data-toggle="modal">купить stp</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="block-sell">
+                <img class="img-responsive" src="images/sell.png" alt="#">
+                <p>Вы зарабатываете на продаже STP <br class="hidden-xxs">
+                  под залог (из Фонда STORMUP) и когда <br class="hidden-xxs">
+                  цена резко падает - закрываете залог, <br class="hidden-xxs">
+                  покупая STP.</p>
+                <div class="block-sell-btn">
+                  <a href="#form-1" data-toggle="modal">Продать stp</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="section-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 col-md-4">
+            <div class="section-2-block section-2-block-1">
+              <span>Легко начать</span>
+              <p>Все что нужно это <br>
+                зарегистрироваться и<br>
+                пополнить баланс!</p>
+            </div>
+            <div class="section-2-block section-2-block-3">
+              <span>Инвестируйте от 1$</span>
+              <p>Что бы начать инвестировать<br>
+                Вам не нужно обладать<br>
+                крупным капиталом.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-4 col-md-4">
+            <!--<img class="img-responsive center-block logo-center hidden-xs animated zoomIn" src="./images/logo-center.png" alt="logo center">-->
+            <img class="img-responsive center-block logo-center hidden-xs animated boxhidden " src="./images/logo-center.png" alt="logo center">
+          </div>
+          <div class="col-sm-4 col-md-4">
+            <div class="section-2-block section-2-block-2">
+              <span>Без выходных</span>
+              <p>Как известно фондовые биржи<br>
+                на выходные прекращают<br>
+                работу, а мы - нет!</p>
+            </div>
+            <div class="section-2-block section-2-block-4">
+              <span>Поддержка 24/7</span>
+              <p>Техническая поддержка работает<br>
+                круглосуточно! Мы всегда поможем и<br class="hidden-mdm">
+                подскажем.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="start-earning-2">
+              <a href="#form-1" data-toggle="modal">Начать зарабатывать!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="text-center">STORMUP это —</h2>
+            <p class="text-center">Бинарные опционы — удобные финансовые инструменты, которые подходят для людей, предпочитающих получать<br class="visible-md visible-lg">
+              быстрый финансовый результат. Торговать ими могут не только профессионалы с превосходной подготовкой, но и<br class="visible-md visible-lg">
+              новички. Поэтому для многих путь к работе на различных финансовых рынках начинается с бинарных опционов.<br class="visible-md visible-lg">
+              Также на нашем сайте трейдеры могут найти аналитические материалы, базы знаний, помогающие в торговле, и дажеv<br class="visible-md visible-lg">
+              интересные идеи инвестиций. Пройдя обучение, вы сможете сразу попробовать свои силы в торговле бинарными<br class="visible-md visible-lg">
+              опционами, открыв свой счет всего за несколько минут!
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 section-3-video-block">
+            <!--<a href="#">-->
+              <div class="section-3-video-block-img  center-block">
+                <img class="img-responsive" src="images/section-3-video-img.jpg" alt="#">
+                <div class="play-img">
+
+                </div>
+                <iframe class="relation_content video-none"  src="https://www.youtube.com/embed/2oTENwC21N8?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+              </div>
+            <!--</a>-->
+          </div>
+          <div class="col-md-12">
+            <div class="start-earning">
+              <a href="#form-1" data-toggle="modal">Начать зарабатывать!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Как начать торговать <br>
+              на STORMUP?</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="section-4-img-block">
+              <img src="./images/section-4-1.png" alt="#">
+            </div>
+            <h3>Регистрируетесь на сайте</h3>
+            <p>Пройдите регистрацию на сайте <br class="hidden-md hidden-s4">
+              STORMUP - это займет всего пару<br class="hidden-md hidden-s4">
+              минут.
+            </p>
+            <div class="start-earning-4">
+              <a href="#form-1" data-toggle="modal">Регнистрация</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="section-4-img-block">
+              <img src="./images/section-4-2.png" alt="#">
+            </div>
+            <h3>Регистрируетесь на сайте</h3>
+            <p>Пополните свой баланс. На данный момент<br class="hidden-md  hidden-s4">
+              мы используем возможность пополнения<br class="hidden-md hidden-s4">
+              Perfect Money и Яндекс Деньги.
+            <div class="img-block">
+              <img src="./images/section-4-4.png" alt="#">
+              <img src="./images/section-4-5.png" alt="#">
+            </div>
+            </p>
+            <div class="start-earning-4">
+              <a href="#form-1" data-toggle="modal">пополнить</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+              <div class="section-4-img-block">
+                <img src="./images/section-4-3.png" alt="#">
+              </div>
+              <h3>Торгуете на бирже STORMUP</h3>
+              <p>Приступайте к торговле на бирже STORMUP.<br class="hidden-md hidden-s4">
+              Вы можете покупать и продавать<br class="hidden-md hidden-s4">
+              внутренние "акции" STP.
+            </p>
+            <div class="start-earning-4">
+              <a href="#form-1" data-toggle="modal">начать торги</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <img class="img-responsive center-block" src="./images/footer-logo.png" alt="footer-logo">
+          </div>
+          <div class="col-md-10">
+            <p>Финансовые операции, предлагаемые данным сайтом, могут обладать повышенным уровнем риска. Приобретая предлагаемые данным сайтом финансовые
+              услуги и инструменты, вы можете понести серьезные финансовые потери или полностью утратить средства, находящиеся на вашем гарантийно-торговом
+              счету. Пожалуйста, оцените все финансовые риски и посоветуйтесь с независимым финансовым консультантом перед началом торговли. Binomo не несет
+              ответственности за любые прямые, косвенные и случайные убытки или любой другой ущерб, связанный с действиями пользователя на данном сайте. Сайтом
+              владеет и управляет компания <a href="#">Tiburon Corporation Limited</a>. Платежные операции проводятся компанией <a href="#">Stagord Resources LTD</a>. Местом оказания услуг
+              является Республика Сейшелы.
+            </p>
+            <div class="processing-policy">
+              <img src="./images/footer-left.png" alt="#">
+              <a href="#">Политика обработки персональных данных</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row footer-bottom">
+          <div class="col-sm-0 col-md-2"></div>
+          <div class="col-sm-9 col-md-7">
+            <p class="copyrigh"><span>stormup © 2017</span></p>
+          </div>
+          <div class="col-sm-3 col-md-3">
+            <div class="block-fa">
+              <a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!--begin modal-->
+    <div class="modal-block modal fade"  tabindex="-1" id="form-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close close-modal" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form role="form" class="form-contact" action="mail.php" method= "POST">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="modal-title-1 text-center">
+                    ДО ЗАПУСКА STORMUP <br>
+                    ОСТАЛОСЬ
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="modal-title-2 text-center">
+                    5 дней
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="modal-title-3 text-center">
+                    Подпишись, что бы получить уведомление <br>
+                    о старте первым!
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <input type="email" name="email" class="center-block text-center" placeholder="Ваш email">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 btn-form-block">
+                  <button type="submit" class="btn btn-form center-block text-center">Отправить</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!--<div class="modal-footer">-->
+            <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+            <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+          <!--</div>-->
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!--begin modal-->
+    <div class="modal fade"  tabindex="-1" id="modal-video">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close close-modal" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="relation">
+              <!--<div class="relation_ratio"></div>-->
+              <!--<iframe id="video" class="relation_content vidio-modal-none"  src="https://www.youtube.com/embed/2oTENwC21N8?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>-->
+              <div id="video-placeholder"></div>
+
+            </div>
+
+
+
+          </div>
+
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!---end modal--->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.parallax.js"></script>
+    <script src="./js/jquery.waypoints.min.js"></script>
+    <script type="text/javascript">
+
+      jQuery(document).ready(function(){
+        // Declare parallax on layers
+        jQuery('.parallax-layer').parallax({
+          mouseport: jQuery("#port")
+        });
+      });
+
+
+
+    </script>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="./js/script.js"></script>
+
+
+    <script>
+
+      $(document).ready(function(){
+        $('.section-3-video-block-img').click(function(){
+
+          $('.video-none').show();
+          var $video = $('.video-none'),
+                src = $video.attr('src');
+          $video.attr('src', src + '&autoplay=1');
+
+        });
+        $('#modal-video').on('hidden.bs.modal', function (event) {
+          player.pauseVideo();
+        });
+
+        $('.logo-center').waypoint(function() {
+          $(this.element).addClass('zoomIn');
+        }, {
+          offset: '70%'
+        });
+
+
+      });
+
+
+
+    </script>
+
+
+
+    </body>
+</html>
+
