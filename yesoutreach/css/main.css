@@ -141,7 +141,7 @@ header .container {
 }
 @media (max-width: 1200px) {
     .section-1 h1 {
-        margin-top: 40px!important;
+        margin-top: 25px!important;
         font-size: 32px;
         text-align: center;
     }
@@ -716,7 +716,7 @@ header .container {
         margin-bottom: -50px;
         text-align: center;
         max-width: 100%;
-        margin-top: 15px;
+        /*border: 1px solid red;*/
     }
 }
 @media (max-width: 400px) {
@@ -989,13 +989,11 @@ header .container {
         margin: 10px auto;
     }
 }
-@media (min-width: 768px) {
-    .section-5 .section-5-block:hover {
-        transition: 0.5s all;
-        -ms-transform: scale(1.1, 1.1);
-        -webkit-transform: scale(1.1, 1.1);
-        transform: scale(1.1, 1.1);
-    }
+.section-5 .section-5-block:hover {
+    /*transition: 0.5s all;*/
+    /*-ms-transform: scale(1.1, 1.1);*/
+    /*-webkit-transform: scale(1.1, 1.1);*/
+    /*transform: scale(1.1, 1.1);*/
 }
 .section-5-img-1 img{
     margin-top: 75px;
@@ -1237,7 +1235,6 @@ header .container {
     font-family: 'Conv_Raleway-Medium';
     font-size: 18px;
     color: #6b6b6b;
-    background: #fff !important;
 }
 .section-6-block-mail  {
     color: #6b6b6b;
@@ -1404,23 +1401,22 @@ header .container {
     text-decoration: none;
     cursor: pointer;
 }
-@media (min-width: 576px) {
-    .link-hover-solid a:after {
-        background-color: #ffc905;
-        display: block;
-        content: "";
-        height: 3px;
-        width: 0; /*задаём длинну линии до наведения курсора*/
-        -webkit-transition: width .3s ease-in-out;
-        -moz--transition: width .3s ease-in-out;
-        transition: width .3s ease-in-out;
-        /*padding-right: .5rem;*/
-        /*padding-left: .5rem;*/
+.link-hover-solid a:after {
+    background-color: #ffc905;
+    display: block;
+    content: "";
+    height: 3px;
+    width: 0;/*задаём длинну линии до наведения курсора*/
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+    /*padding-right: .5rem;*/
+    /*padding-left: .5rem;*/
 
-        position: absolute;
-        /*position: relative;*/
-        right: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
-    }
+
+    position: absolute;
+    /*position: relative;*/
+    right: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
 }
 .link-hover-solid a:hover:after,
 .link-hover-solid a:focus:after {
@@ -1508,7 +1504,7 @@ footer {
     opacity: 0;
 }
 .section-5-block-a:hover img {
-    /*opacity: 1;*/
+    opacity: 1;
 }
 .section-5-block-a a:hover  {
     /*opacity: 1;*/
@@ -1518,10 +1514,10 @@ footer {
     /*-webkit-transform: scale(1.1, 1.1);*/
     /*transform: scale(1.1, 1.1);*/
 }
-.section-6-display-none {
-    display: none;
+/*.section-6-display-none {*/
+    /*display: none;*/
 
-}
+/*}*/
 .section-6-display-block {
     display: block;
 
@@ -1557,17 +1553,17 @@ footer {
 .section-2-block-img-2 {
     opacity: 0;
     amimation-duration: 5s!important;
-    animation-delay: 4s!important;
+    animation-delay: 2s!important;
 }
 .section-2-block-img-3 {
     opacity: 0;
     amimation-duration: 5s!important;
-    animation-delay: 5s!important;
+    animation-delay: 3s!important;
 }
 .section-2-block-img-4 {
     opacity: 0;
     amimation-duration: 5s!important;
-    animation-delay: 8s!important;
+    animation-delay: 4s!important;
 }
 
 .section-4-md-block-animated {
