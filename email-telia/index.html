@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+	<meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+  <title></title> <!-- the <title> tag shows on email notifications on Android 4.4. -->
+  <style type="text/css">
+  	
+  	/* ensure that clients don't add any padding or spaces around the email design and allow us to style emails for the entire width of the preview pane */
+		body,
+		#bodyTable {
+			height:100% !important;
+			width:100% !important;
+			margin:0;
+			padding:0;
+		}
+		
+		/* Ensures Webkit- and Windows-based clients don't automatically resize the email text. */
+		body,
+		table,
+		td,
+		p,
+		a,
+		li,
+		blockquote {
+			-ms-text-size-adjust:100%;
+			-webkit-text-size-adjust:100%;
+		}
+		
+		/* Forces Yahoo! to display emails at full width */
+		.thread-item.expanded .thread-body .body, .msg-body {
+			width: 100% !important;
+			display: block !important;
+		}
+
+    /* Forces Hotmail to display emails at full width */
+    .ReadMsgBody,
+    .ExternalClass {
+			width: 100%;
+			background-color: #f4f4f4;
+    }
+
+    /* Forces Hotmail to display normal line spacing. */
+		.ExternalClass,
+		.ExternalClass p,
+		.ExternalClass span,
+		.ExternalClass font,
+		.ExternalClass td,
+		.ExternalClass div {
+			line-height:100%;
+    }
+
+    /* Resolves webkit padding issue. */
+    table {
+			border-spacing:0;
+    }
+
+    /* Resolves the Outlook 2007, 2010, and Gmail td padding issue, and removes spacing around tables that Outlook adds. */
+    table,
+    td {
+			border-collapse:collapse;
+			mso-table-lspace:0pt;
+			mso-table-rspace:0pt;
+    }
+    
+    /* Corrects the way Internet Explorer renders resized images in emails. */
+    img {
+    	-ms-interpolation-mode: bicubic;
+    }
+    
+    /* Ensures images don't have borders or text-decorations applied to them by default. */
+    img,
+    a img {
+    	border:0;
+    	outline:none;
+    	text-decoration:none;	    
+    }
+
+    /* Styles Yahoo's auto-sensing link color and border */
+    .yshortcuts a {
+			border-bottom: none !important;
+    }
+    
+    /* Styles the tel URL scheme */
+    a[href^=tel],
+		.mobile_link,
+		.mobile_link a {
+	    color:#222222 !important;
+			text-decoration: underline !important;
+    }
+  
+    /* Media queries for when the viewport is smaller than the default email width but not too narrow. */
+    @media screen and (max-device-width: 600px), screen and (max-width: 600px) {
+
+			/* Constrains email width for small screens */
+			table[class="email-container"] {
+				width: 100% !important;
+			}
+			/* Constrains tables for small screens */
+			table[class="fluid"] {
+				width: 100% !important;
+			}
+			
+			/* Forces images to resize to full width of their container */
+			img[class="fluid"],
+			img[class="force-col-center"] {
+				width: 100% !important;
+				max-width: 100% !important;
+				height: auto !important;
+			}
+			/* And centers these ones */
+				img[class="force-col-center"] {
+				margin: auto !important;
+			}
+			
+			/* Forces table cells into rows */
+			td[class="force-col"],
+			td[class="force-col-center"] {
+				display: block !important;
+				width: 100% !important;
+				clear: both;
+			}
+			/* And centers these ones */
+			td[class="force-col-center"] {
+				text-align: center !important;
+			}
+			
+			/* Forces table cells into rows */
+			/* Floats a previously stacked image to the left */
+			img[class="col-3-img-l"] {
+				float: left;
+				margin: 0 15px 15px 0;
+			}
+			/* Floats a previously stacked image to the right */
+			img[class="col-3-img-r"] {
+				float: right;
+				margin: 0 0 15px 15px;
+			}
+			
+			/* Makes buttons full width */
+			table[class="button"] {
+				width: 100% !important;
+			}
+         
+    }
+
+    /* Media queries for when the viewport is narrow. */
+    /* Rules prefixed with 'hh-' (for 'handheld') repeat much of what's above, but these don't trigger until the smaller screen width. */
+    @media screen and (max-device-width: 425px), screen and (max-width: 425px) {
+
+			/* Helper only visible on handhelds. All styles are inline along with a `display:none`, which this class overrides */
+			div[class="hh-visible"] {
+				display: block !important;
+			}
+			
+			/* Center stuff */
+			div[class="hh-center"] {
+				text-align: center;
+				width: 100% !important;
+			}
+			
+			/* Constrain tables for small screens */
+			table[class="hh-fluid"] {
+				width: 100% !important;
+			}
+			
+			/* Force images to resize to full width of their container */
+			img[class="hh-fluid"],
+			img[class="hh-force-col-center"] {
+				width: 100% !important;
+				max-width: 100% !important;
+				height: auto !important;
+			}
+			/* And center these ones */
+			img[class="hh-force-col-center"] {
+				margin: auto !important;
+			}
+			
+			/* Force table cells into rows */
+			td[class="hh-force-col"],
+			td[class="hh-force-col-center"] {
+				display: block !important;
+				width: 100% !important;
+				clear: both;
+			}
+			/* And center these ones */
+			td[class="hh-force-col-center"] {
+				text-align: center !important;
+			}
+			
+			/* Stack the previously floated images */
+			img[class="col-3-img-l"],
+			img[class="col-3-img-r"] {
+				float: none !important;
+				margin: 15px auto !important;
+				text-align: center !important;
+			}
+
+    }
+          
+  </style>
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="#f4f4f4" style="margin:0; padding:0; -webkit-text-size-adjust:none; -ms-text-size-adjust:none;">
+<table cellpadding="0" cellspacing="0" border="0" height="100%" width="100%" bgcolor="#f4f4f4" id="bodyTable" style="border-collapse: collapse;table-layout: fixed;margin:0 auto;"><tr><td>
+
+
+
+
+
+  </table>
+
+    <table border="0" width="600" cellpadding="0" cellspacing="0" align="center" bgcolor="#ffffff" style="border: 1px solid #e5e5e5;margin: auto;" class="email-container">
+      <!--<tr>-->
+        <!--<td class="force-col-center" valign="middle" style="padding: 10px 15px 5px 15px;text-align: right;">-->
+          <!--<img src="https://custom.cvent.com/CDEC4CF345614D529F8FA668646B89F4/pix/b32e45367765414a8d2bb421b3f4e189.png" alt="logo" height="54" width="125" border="0">-->
+        <!--</td>-->
+      <!--</tr>-->
+      <tr>
+        <td>
+          <img src="header.png" alt="alt text" height="235" width="600" border="0" style="display: block;" class="fluid">
+        </td>
+      </tr>
+      <!-- Single Fluid Image, No Crop : END -->
+    
+      <!-- Full Width, Fluid Column : BEGIN -->
+      <tr>
+        <td>
+      <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center">
+        <tr>
+          <td style="padding: 30px 30px 10px 30px; font-family: Arial; font-size: 14px; line-height: 16px; color: #444444;">
+            <div style="font-size: 19px;line-height: 1; color: #990ae3; font-family: Arial; font-weight: 600" class="hh-center">SAVE THE DATE: TELIA IOT SYMPOSIUM 13. SEPTEMBER</div><br>
+            I fjor deltok over 700 personer på vårt første Telia<br> IoT Symposium. Nå gjentar vi suksessen!<br><br>
+            IoT har vært et buzzword i snart et tiår og har fått fotfeste i mange bedrifter og samfunn, som en del av digitaliseringsreisen vi er på.<br><br>
+            Hva er egentlig IoT og hvor langt har man kommet i 2018? <br>Hvilke industrier og områder har blitt transformert takket være ny teknologi,<br> og hvilke selskaper har blitt skapt eller overlevd på bakgrunn av IoT?<br><br>
+            Tema for Telia IoT Symposium 2018 er:
+          </td>
+        </tr>
+      </table>
+      <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center">
+        <tr>
+          <td style="padding: 10px 30px 0 30px ; font-family: Arial; font-size: 14px; line-height: 16px; color: #000;">
+            <div style="font-size: 17px;line-height: 1; color: #000; font-family: Arial; font-weight: 600" class="hh-center">THE NEXT NORWAY - THE NEXT WORLD - THE NEXT IS NOW</div><br>
+            Her vil du oppdage en IoT-verden der noen av verdens største selskaper, profiler og teknologer presenterer hva de gjør og hvor de skal. Du vil få innsikt i hva Norge gjør for å tilpasse politikk og utdanning som vil ruste oss for fremtiden. Til slutt vil innovative selskaper og aktører dele hva de har gjort (eller sluttet å gjøre) for å bli konkurransedyktige i tiden fremover.
+            <br>
+            <br>
+            Bli med på denne innholdsrike og spennende ettermiddagen – og ta steget inn i en IoT-verden som gir deg innsikt og verktøy til hva du kan gjøre annerledes i morgen.
+            <br>
+            <br>
+            <div style="font-size: 15px;line-height: 1; color: #000; font-family: Arial; font-weight: 900" class="hh-center">Hold av datoen 13. september. Mer informasjon kommer fortløpende.</div><br>
+          </td>
+        </tr>
+      </table>
+    </td>
+      </tr>
+      <!-- Full Width, Fluid Column : END -->
+  
+
+      <!-- Two Columns, One Column Without Padding ==> Stacked Layout : BEGIN -->
+      <tr>
+        <td>
+          <!--<div style="font-size: 15px;line-height: 1; color: #000; font-family: Arial; font-weight: 900" class="hh-center">Hold av datoen 13. september. Mer informasjon kommer fortløpende.</div><br>-->
+
+          <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" class="fluid">
+            <tr>
+              <td valign="top" class="hh-force-col">
+                <table cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <!--<td style="padding: 30px;font-family: sans-serif; font-size: 16px; line-height: 22px; color: #444444;">-->
+                    <td valign="top" class="hh-force-col-center">
+                      <img src="tabl.png" alt="#" height="60" width="250" border="0" style="display: block;" class="hh-fluid">
+                    </td>
+                      <!--<table cellspacing="0" cellpadding="0" border="0" class="button" style="margin: 0;">-->
+                        <!--<tr>-->
+                          <!--<td style="-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background-image: url(http://tedgoas.github.io/Cerberus/assets/bg-btn.png); background-position: top left; background-repeat: repeat-x; background-color: #444444; text-align: center;">-->
+                            <!--<a href="http://www.google.com" style="color: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; text-align: center; text-decoration: none; display: block; padding: 15px 20px; border: 0px solid #333333; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;">-->
+                              <!--<b>&lt;!&ndash;[if mso]>&nbsp;<![endif]&ndash;&gt;PÅMELDING&lt;!&ndash;[if mso]>&nbsp;<![endif]&ndash;&gt;</b>-->
+                            <!--</a>-->
+
+                          <!--</td>-->
+                          <!--<td style="-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background-image: url(http://tedgoas.github.io/Cerberus/assets/bg-btn.png); background-position: top left; background-repeat: repeat-x; background-color: #444444; text-align: center;">-->
+
+                            <!--<a href="http://www.google.com" style="color: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; text-align: center; text-decoration: none; display: block; padding: 15px 20px; border: 0px solid #333333; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;">-->
+                              <!--<b>&lt;!&ndash;[if mso]>&nbsp;<![endif]&ndash;&gt;LEGG TIL KALENDER&lt;!&ndash;[if mso]>&nbsp;<![endif]&ndash;&gt;</b>-->
+                            <!--</a>-->
+                          <!--</td>-->
+                        <!--</tr>-->
+                        <!--<td>-->
+                          <!--<a href="">1111</a>-->
+                        <!--</td>-->
+
+
+                      </table>
+                      <tr>
+                        <td style="padding: 0px 30px 0px 30px; font-family: Arial; font-size: 14px; line-height: 16px; color: #000;">
+                          <p>
+                            <a style="padding-right: 20px" href="#"><img src="btn1.png" width="150" height="28" alt="#"></a>
+                            <a href="#"><img src="btn2.png" width="150" height="28" alt="#"></a>
+                          </p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td style="padding: 0px 30px 10px 30px; font-family: Arial; font-size: 14px; line-height: 16px; color: #000;">
+                          Vennlig hilsen,<br>
+                          Telia Bedrift
+                        </td>
+                      </tr>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td valign="top" class="hh-force-col-center">
+                <img src="telia-mail.png" alt="telia-mail.png" height="183" width="120" border="0" style="display: block;margin: auto;" class="hh-fluid">
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- Two Columns, One Column Without Padding ==> Stacked Layout : END -->
+      
+      <!-- Three Column ==> Stacked Wide Layout ==> Stacked Narrow Layout : BEGIN -->
+
+  <!-- Email Container : END -->
+      <!--<tr>
+        <td class="force-col-center" valign="middle" style="padding: 10px 15px 5px 15px;text-align: center;">
+          <img src="logo-footer.png" alt="logo" height="54" width="125" border="0">
+        </td>
+      </tr> -->
+
+
+</td></tr></table>
+</body>
+</html>
